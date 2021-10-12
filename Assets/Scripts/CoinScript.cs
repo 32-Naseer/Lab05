@@ -8,6 +8,7 @@ public class CoinScript : MonoBehaviour
 {
     public Text scoreText;
     public static int scoreCount;
+    public GameObject particle;
     // Start is called before the first frame update
     void Start()
     {
@@ -32,6 +33,7 @@ public class CoinScript : MonoBehaviour
                 Destroy(gameObject);
                 scoreCount += 10;
                 scoreText.text = "Score: " + scoreCount;
+                Instantiate(particle, gameObject.transform.position, Quaternion.identity);
             }
         }
     }
