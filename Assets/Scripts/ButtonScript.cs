@@ -14,7 +14,15 @@ public class ButtonScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(SceneManager.GetActiveScene().name == "GameLoseScene")
+        {
+            Cursor.lockState = CursorLockMode.None;
+        }
 
+        if (SceneManager.GetActiveScene().name == "GameWinScene")
+        {
+            Cursor.lockState = CursorLockMode.None;
+        }
     }
 
     public void Restart()
